@@ -1,3 +1,4 @@
+import { CuentoModelServer, ServerResponse } from './../../models/cuentos.models';
 import { CuentosService } from './../../servicios/cuentos.service';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
@@ -14,7 +15,6 @@ export class CuentoComponent implements OnInit, AfterViewInit {
 
   id: number;
   cuento;
-  thumbImages: any[] = [];
 
 
   constructor(private cuentosService: CuentosService,
@@ -32,10 +32,6 @@ export class CuentoComponent implements OnInit, AfterViewInit {
         this.id = cuentoId;
         this.cuentosService.getSingleCuento(this.id).subscribe(cuents => {
           this.cuento = cuents;
-
-          if(cuents.imagen != null) {
-            this.thumbImages = cuents.imagen.split(';');
-          }
         });
     });
   }

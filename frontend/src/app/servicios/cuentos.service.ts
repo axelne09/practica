@@ -26,7 +26,7 @@ export class CuentosService {
 
   /*obtener solo 1 cuento*/
   getSingleCuento(id: number): Observable<CuentoModelServer>{
-    return this.http.get<CuentoModelServer>(this.SERVER_URL + '/cuentos' + id);
+    return this.http.get<CuentoModelServer>(this.SERVER_URL + '/cuentos/' + id);
   }
 
   /*obtener cuento de una categoria*/
