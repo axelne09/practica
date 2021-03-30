@@ -27,6 +27,8 @@ import { FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-logi
 import {SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import { CuentoComponent } from './componentes/cuento/cuento.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -59,7 +61,9 @@ import { FooterComponent } from './componentes/footer/footer.component';
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
-    SocialLoginModule
+    SocialLoginModule,
+    NgxSpinnerModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     {

@@ -33,7 +33,7 @@ export class UserService {
   //Login usuario con email y pass
   loginUser(email: string, password: string){
     this.httpClient.post(`${this.SERVER_URL}/auth/login`, {email, password})
-      .subscribe((data: ResponseModel) => {
+      .subscribe((data: any) => {
         this.auth = data.auth;
         this.authState$.next(this.auth);
         this.userData$.next(data);
